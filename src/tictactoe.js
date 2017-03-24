@@ -48,7 +48,7 @@
 			} else {
 				board[indexFor(location)] = cell;
 			}
-		}catch(IndexOutOfBoundsException exc){
+		}catch(error){
 			throw new Error("Invalid cell");
 		}
 	}
@@ -56,7 +56,9 @@
   TicTacToeBoard.prototype.cellAt = function(location) {
 		return board[indexFor(location)];
 	}
-
+  TicTacToeBoard.prototype.state = function(){
+    return board;
+  }
 
   TicTacToeBoard.prototype.winner = function() {
 		var winning_indexes = [
@@ -111,8 +113,8 @@
 		for(var y = 0; y < HEIGHT; y++) {
 			for(var x = 0; x < WIDTH; x++) {
 				var l = new Location(x, y);
-				Cell c = this.cellAt(l);
-				if(c === Cell.EMPTY) {
+				var cell = this.cellAt(l);
+				if(cell === Cell.EMPTY) {
 					slots.push(l);
 				}
 			}
@@ -137,9 +139,9 @@
 
 		for(var i = 0; i < possibleLocations.length; i++) {
       var location = possibleLocations[i];
-			currentBoard = gameBoard.copy();
+			currentBoard = this.gameBoard.copy();
 			currentBoard.makeMove(team, location);
-			thisScore = this.minimax(currentBoard, gameBoard.oppositePlayer(team));
+			thisScore = this.minimax(currentBoard, this.gameBoard.oppositePlayer(team));
 			if(thisScore >= bestScore) {
 				bestScore = thisScore;
 				bestMove = location;
