@@ -1,0 +1,31 @@
+{
+  "name": "tictactoe-ai",
+  "version": "1.0.0",
+  "description": "desc",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha ./spec/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kinotto/TicTacToeAI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kinotto/TicTacToeAI/issues"
+  },
+  "homepage": "https://github.com/kinotto/TicTacToeAI#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "browserify": "^14.1.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^2.1.2",
+    "mocha": "^3.2.0",
+    "require-dir": "^0.3.1"
+  }
+}
