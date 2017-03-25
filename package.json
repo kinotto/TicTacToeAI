@@ -6,7 +6,7 @@
   "main": "src/tictactoe.js",
   "scripts": {
     "test": "mocha ./spec/test-server.js",
-    "coverage": "istanbul cover _mocha -- ./spec/test-server.js"
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
     "chai": "^3.5.0",
+    "coveralls": "^2.12.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
@@ -29,7 +30,7 @@
     "gulp-uglify": "^2.1.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "require-dir": "^0.3.1",
-    "tape": "^4.6.3"
+    "nyc": "^10.1.2",
+    "require-dir": "^0.3.1"
   }
 }
