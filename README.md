@@ -2,7 +2,7 @@
 Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm, for browser and Node.js
 
 
-<img src="" alt="not found" />
+<img src="https://travis-ci.org/kinotto/TicTacToeAI.svg?branch=master" alt="not found" />
 
 ### 1. Installation
 
