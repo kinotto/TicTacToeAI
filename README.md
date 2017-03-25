@@ -1,8 +1,16 @@
 # TicTacToeAI
+
+
+<img src="https://travis-ci.org/kinotto/TicTacToeAI.svg?branch=master" alt="not found" /> <img src='https://coveralls.io/repos/github/kinotto/TicTacToeAI/badge.svg?branch=master' alt='Coverage Status' />
+
+
+
+
 Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm, for browser and Node.js
 
 
-<img src="https://travis-ci.org/kinotto/TicTacToeAI.svg?branch=master" alt="not found" />
+
+
 
 ### 1. Installation
 
