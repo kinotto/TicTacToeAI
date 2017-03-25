@@ -22,7 +22,8 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
   ```
   
   ```javascript
-  var board = tictactoe.TicTacToeBoard(['','','','','','','','X','O']);
+ 
+  var board = tictactoe.TicTacToeBoard(['','','','','','','','','']); //empty board flatten inside an array
   var aiTeam = board.oppositePlayer("X");
   aiPlayer = tictactoe.TicTacToeAIPlayer();
   aiPlayer.initialize(aiTeam, board);
