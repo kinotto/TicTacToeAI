@@ -4,7 +4,7 @@
   "description": "TicTacToe AI javascript library, an easy way to add IA to your TicTacToe game, for browser and Node.js",
   "main": "src/tictactoe.js",
   "scripts": {
-    "test": "mocha ./spec/test.js"
+    "test": "mocha ./spec/test-server.js"
   },
   "repository": {
     "type": "git",
