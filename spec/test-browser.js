@@ -1,7 +1,7 @@
 (function(){
   var expect = chai.expect;
-
-  var board = new TicTacToe.TicTacToeBoard(['','','','','','','','','']);
+/*
+  var board = new TicTacToe.TicTacToeBoard(['','','','','','','','X','O']);
   var aiTeam = board.oppositePlayer("X");
   aiPlayer = new TicTacToe.TicTacToeAIPlayer();
   aiPlayer.initialize(aiTeam, board);
@@ -9,56 +9,38 @@
   if(move != null){
     board.makeMove(aiTeam, move);
   }
-  console.log(board.state())
+  console.log(board.state)*/
 
 
+  describe('TicTacToeAI unit testing', function(){
 
-
-var username = "YOURUSERNAME"; //set your username here
-describe('Geonames API', function(){
-
-    var geonames;
+    var board, aiPlayer;
+    var statusBoard = ['','','O','','','O','X','X','O'];
     beforeEach(function(){
-      geonames = new GeoNames({username: username, lan: 'en', encoding: 'JSON'});
+      board = new TicTacToe.TicTacToeBoard(statusBoard);
+      aiPlayer = new TicTacToe.TicTacToeAIPlayer();
+      aiPlayer.initialize('O', board);
     })
 
-
-  it('should return continent names ', function(done){
-      geonames.search({q: 'CONT'}, function(resp){
-        expect(resp.geonames).to.be.instanceOf(Array);
-        done();
-      }, function(err){
-        done(err);
-      })
+    it('AI should pick an opponent team', function(){
+      expect(aiPlayer.team).to.equal('O');
 
     })
 
-      it('continent should have a continendCode ', function(done){
-      geonames.search({q: 'CONT'}, function(resp){
-        expect(resp.geonames[0].continentCode).to.exist;
-        done();
-      }, function(err){
-        done(err);
-      })
+    it('AI should be initialized with a board', function(){
+      expect(aiPlayer.gameBoard).to.be.a('object');
     })
 
-    it('should return countries information', function(done){
-      geonames.countryInfo(function(resp){
-        expect(resp.geonames[0].capital).to.exist;
-        done();
-      }, function(err){
-        done(err);
-      })
-    })
+    it('AI should choose a VALID move', function(){
+      var move = aiPlayer.makeMove();
+      expect(move.x).exist;
+      expect(move.y).exist;
 
-    it('should return children information', function(done){
-      geonames.children({geonameId: '6255148'}, function(resp){
-        expect(resp.geonames[0].population).to.exist;
-        done();
-      }, function(err){
-        done(err);
-      })
+      var flatMove = move.x + (move.y * 3);
+      console.log(flatMove);
+      expect(statusBoard[flatMove]).to.be.empty;
     })
+  })
 
-})
+
 }())

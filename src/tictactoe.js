@@ -14,13 +14,14 @@
   }
 
 /******************* TicTacToeBoard *********************************/
-  var board = [];
+
   function TicTacToeBoard(cells){
+    this.board = [];
 		for(var i=0; i<NUM_CELLS; i++) {
       if(cells){
-        board[i] = cells[i];
+        this.board[i] = cells[i];
       } else {
-        board[i] = Cell.EMPTY;
+        this.board[i] = Cell.EMPTY;
       }
 		}
   }
@@ -34,8 +35,12 @@
       return Cell.EMPTY;
     }
   }
-  TicTacToeBoard.prototype.copy = function(obj){
-    return JSON.parse(JSON.stringify(obj));
+  TicTacToeBoard.prototype.copy = function(){
+    //return JSON.parse(JSON.stringify(this));
+    var clone = Object.create(this);
+    clone.board = [];
+    [].push.apply(clone.board, this.board);
+    return clone;
   }
   var indexFor = function(location) {
 		return location.x + (location.y * WIDTH);
@@ -43,22 +48,20 @@
 
   TicTacToeBoard.prototype.makeMove = function(cell, location){
 		try {
-			if(cellAt(location) != Cell.EMPTY) {
+			if(this.cellAt(location) != Cell.EMPTY) {
 				throw new Error("Cell is already take");
 			} else {
-				board[indexFor(location)] = cell;
+				this.board[indexFor(location)] = cell;
 			}
 		}catch(error){
-			throw new Error("Invalid cell");
+			throw new Error(error || "Invalid cell");
 		}
 	}
 
   TicTacToeBoard.prototype.cellAt = function(location) {
-		return board[indexFor(location)];
+		return this.board[indexFor(location)];
 	}
-  TicTacToeBoard.prototype.state = function(){
-    return board;
-  }
+
 
   TicTacToeBoard.prototype.winner = function() {
 		var winning_indexes = [
@@ -77,6 +80,7 @@
 				[2, 4, 6]
 		];
 
+    var board = this.board;
 		// Return the winner if there is one
 		for(var i=0; i<winning_indexes.length; i++){
 			if(board[winning_indexes[i][0]] != Cell.EMPTY
@@ -90,7 +94,7 @@
 		// If there is no winner and the board in full than the game is a draw
 		// TODO: We can check if it is impossible for any one to win
 		// But that would be too much work for now
-		if(boardFull()) {
+		if(this.boardFull()) {
 			//return Cell.EMPTY;
 			return new TicTacToeWinner(Cell.EMPTY, null);
 		}
@@ -101,7 +105,7 @@
 
   TicTacToeBoard.prototype.boardFull = function() {
 		for(var i=0; i<NUM_CELLS; i++) {
-			if(board[i] === Cell.EMPTY) {
+			if(this.board[i] === Cell.EMPTY) {
 				return false;
 			}
 		}
@@ -140,8 +144,8 @@
 		for(var i = 0; i < possibleLocations.length; i++) {
       var location = possibleLocations[i];
 			currentBoard = this.gameBoard.copy();
-			currentBoard.makeMove(team, location);
-			thisScore = this.minimax(currentBoard, this.gameBoard.oppositePlayer(team));
+			currentBoard.makeMove(this.team, location);
+			thisScore = this.minimax(currentBoard, this.gameBoard.oppositePlayer(this.team));
 			if(thisScore >= bestScore) {
 				bestScore = thisScore;
 				bestMove = location;
@@ -163,12 +167,12 @@
 	TicTacToeAIPlayer.prototype.minimax = function(board, thisTeam){
 		var maxScore = -1;
 		var multiplyer = 1;
-		if(thisTeam != team) {
+		if(thisTeam != this.team) {
 			multiplyer = -1;
 		}
 		var winner = board.winner();
 		if(winner != null) {
-			return this.evaluateWinner(winner.getCell());
+			return this.evaluateWinner(winner.cell);
 		}
 
 		var possibleMoves = board.emptySlots();
@@ -177,8 +181,8 @@
 
 		for(var i = 0; i < possibleMoves.length; i++) {
 			currentBoard = board.copy();
-			currentBoard.makeMove(thisTeam, l);
-			thisScore = multiplyer*minimax(currentBoard, board.oppositePlayer(thisTeam));
+			currentBoard.makeMove(thisTeam, possibleMoves[i]);
+			thisScore = multiplyer * this.minimax(currentBoard, board.oppositePlayer(thisTeam));
 			if(thisScore >= maxScore) {
 				maxScore = thisScore;
 			}
@@ -187,9 +191,9 @@
 	}
 
   TicTacToeAIPlayer.prototype.evaluateWinner = function(winner) {
-		if((winner == null) || (winner === Cell.EMPTY)) {
+		if((winner === null) || (winner === Cell.EMPTY)) {
 			return 0;
-		} else if(winner == team) {
+		} else if(winner === this.team) {
 			return 1;
 		} else {
 			return -1;
@@ -201,6 +205,7 @@
 		this.cell = cell;
 		this.indexes = indexes;
 	}
+
 
   if(typeof module !== 'undefined' && module.exports){
     module.exports = {

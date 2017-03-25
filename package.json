@@ -1,8 +1,8 @@
 {
-  "name": "tictactoe-ai",
+  "name": "tictactoe-AI",
   "version": "1.0.0",
-  "description": "desc",
-  "main": "app.js",
+  "description": "TicTacToe AI javascript library, an easy way to add IA to your TicTacToe game, for browser and Node.js",
+  "main": "src/tictactoe.js",
   "scripts": {
     "test": "mocha ./spec/test.js"
   },
@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/kinotto/TicTacToeAI.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Karim Abdelcadir <kinotto88@yahoo.it>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kinotto/TicTacToeAI/issues"
   },
@@ -19,6 +19,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
+    "chai": "^3.5.0",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
