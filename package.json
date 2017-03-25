@@ -1,10 +1,12 @@
 {
-  "name": "tictactoe-AI",
-  "version": "1.0.0",
+  "name": "tictactoe-ai",
+  "homepage": "https://github.com/kinotto/TicTacToeAI",
+  "version": "1.0.1",
   "description": "TicTacToe AI javascript library, an easy way to add IA to your TicTacToe game, for browser and Node.js",
   "main": "src/tictactoe.js",
   "scripts": {
-    "test": "mocha ./spec/test-server.js"
+    "test": "mocha ./spec/test-server.js",
+    "coverage": "istanbul cover _mocha -- ./spec/test-server.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/kinotto/TicTacToeAI/issues"
   },
-  "homepage": "https://github.com/kinotto/TicTacToeAI#readme",
   "devDependencies": {
     "browser-sync": "^2.18.8",
     "browserify": "^14.1.0",
@@ -26,7 +27,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-sync": "^0.1.4",
     "gulp-uglify": "^2.1.2",
+    "istanbul": "^0.4.5",
     "mocha": "^3.2.0",
-    "require-dir": "^0.3.1"
+    "require-dir": "^0.3.1",
+    "tape": "^4.6.3"
   }
 }

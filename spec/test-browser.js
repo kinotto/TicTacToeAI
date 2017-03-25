@@ -1,15 +1,5 @@
 (function(){
   var expect = chai.expect;
-/*
-  var board = new TicTacToe.TicTacToeBoard(['','','','','','','','X','O']);
-  var aiTeam = board.oppositePlayer("X");
-  aiPlayer = new TicTacToe.TicTacToeAIPlayer();
-  aiPlayer.initialize(aiTeam, board);
-  var move = aiPlayer.makeMove();
-  if(move != null){
-    board.makeMove(aiTeam, move);
-  }
-  console.log(board.state)*/
 
 
   describe('TicTacToeAI unit testing', function(){
