@@ -22,14 +22,15 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
   ```
   
   ```javascript
-  var emptyBoard = new tictactoe.TicTacToeBoard(['','','','','','','','','']);
-  aiPlayer = new tictactoe.TicTacToeAIPlayer();
-  aiPlayer.initialize("O", emptyBoard);
+  var board = tictactoe.TicTacToeBoard(['','','','','','','','X','O']);
+  var aiTeam = board.oppositePlayer("X");
+  aiPlayer = tictactoe.TicTacToeAIPlayer();
+  aiPlayer.initialize(aiTeam, board);
   var move = aiPlayer.makeMove();
   if(move != null){
     board.makeMove(aiTeam, move);
   }
-  console.log(board.state)
+  console.log(board.board);
   ```
 
 - **browser**: (plain ajax xhr call)
@@ -42,7 +43,7 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
   ```
   ```javascript
   //TicTacToe is attached to window object
-  var emptyBoard = new TicTacToe.TicTacToeBoard(['','','','','','','','','']);
+  var board = new TicTacToe.TicTacToeBoard(['','','','','','','','','']);
   aiPlayer = new TicTacToe.TicTacToeAIPlayer();
   //same as nodejs from here on
   ```
