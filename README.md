@@ -14,7 +14,7 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
 ### 2. Usage:
 
 
-- **Nodejs**: (bluebird promise based API)
+- **Nodejs**:
 
   
   ```javascript
@@ -34,14 +34,13 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
   console.log(board.board);
   ```
 
-- **browser**: (plain ajax xhr call)
+- **browser**:
 
   import the script:
-  
-
   ```html
   <script type="text/javascript" src="node_modules/tictactoe/dist/tictactoe.min.js"></script>
   ```
+  
   ```javascript
   //TicTacToe is attached to window object
   var board = new TicTacToe.TicTacToeBoard(['','','','','','','','','']);
