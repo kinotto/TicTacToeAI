@@ -6,7 +6,7 @@ Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm,
 
 ### 1. Installation
 
-> npm install --save tictactoe.js
+> npm install --save tictactoe-ai
 
 <br/>
 
