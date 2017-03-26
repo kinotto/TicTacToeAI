@@ -1,1 +1,2 @@
-coverage/* linguist-vendored
+coverage/* linguist-documentation
+spec/* linguist-documentation

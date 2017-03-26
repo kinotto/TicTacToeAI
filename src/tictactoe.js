@@ -49,12 +49,12 @@
   TicTacToeBoard.prototype.makeMove = function(cell, location){
 		try {
 			if(this.cellAt(location) != Cell.EMPTY) {
-				throw new Error("Cell is already take");
+				throw new Error("Cell is already taken");
 			} else {
 				this.board[indexFor(location)] = cell;
 			}
 		}catch(error){
-			throw new Error(error || "Invalid cell");
+			throw error;
 		}
 	}
 
