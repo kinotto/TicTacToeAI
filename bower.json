@@ -3,14 +3,7 @@
   "version": "1.0.1",
   "homepage": "https://github.com/kinotto/TicTacToeAI",
   "authors": [
-    "Karim Abdelcadir <kinotto88@yahoo.it>"
-  ],
-  "main": "src/tictactoe.js",
-  "keywords": [
-    "tictactoe",
-    "ai",
-    "minimax",
-    "depth first"
+    "karim"
   ],
   "license": "MIT",
   "ignore": [
