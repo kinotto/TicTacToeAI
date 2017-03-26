@@ -8,8 +8,8 @@
   "main": "src/tictactoe.js",
   "keywords": [
     "tictactoe",
-    "ai"
-    "minimax"
+    "ai",
+    "minimax",
     "depth first"
   ],
   "license": "MIT",
