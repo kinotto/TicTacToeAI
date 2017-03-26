@@ -1,14 +1,9 @@
 {
-  "name": "tictactoe-ai",
-  "version": "1.0.0",
+  "name": "TicTacToeAI",
+  "version": "1.0.1",
   "homepage": "https://github.com/kinotto/TicTacToeAI",
-  "description": "tictactoe AI library for nodejs and browser usage",
   "authors": [
-    "Karim Abdelcadir <kinotto88@yahoo.it>"
-  ],
-  "main": "src/tictactoe.js",
-  "keywords": [
-    "tictactoe"
+    "karim"
   ],
   "license": "MIT",
   "ignore": [
@@ -18,5 +13,4 @@
     "test",
     "tests"
   ]
-
 }
