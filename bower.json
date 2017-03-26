@@ -1,5 +1,5 @@
 {
-  "name": "geonames.js",
+  "name": "tictactoe-ai",
   "version": "1.0.0",
   "homepage": "https://github.com/kinotto/TicTacToeAI",
   "description": "tictactoe AI library for nodejs and browser usage",
