@@ -8,7 +8,7 @@
   describe('TicTacToeAI unit testing', function(){
 
     var board, aiPlayer;
-    var statusBoard = ['','','','','','','','','O'];
+    var statusBoard = ['','','','','','','','X','O'];
 
 
     it('should instanciate a board', function(){
