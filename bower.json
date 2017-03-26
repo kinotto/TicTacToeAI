@@ -1,15 +1,14 @@
 {
-<<<<<<< HEAD
   "name": "tictactoe-ai",
-  "homepage": "www.karimabdelcadir.com",
-  "description": "",
-=======
-  "name": "TicTacToeAI",
   "version": "1.0.1",
   "homepage": "https://github.com/kinotto/TicTacToeAI",
->>>>>>> parent of 6797dc7... bower
+  "description": "tictactoe",
   "authors": [
-    "karim"
+    "Karim Abdelcadir <kinotto88@yahoo.it>"
+  ],
+  "main": "src/tictactoe.js",
+  "keywords": [
+    "tictactoe"
   ],
   "license": "MIT",
   "ignore": [
@@ -18,5 +17,7 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {}
+
 }
