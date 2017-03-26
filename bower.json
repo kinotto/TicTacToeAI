@@ -1,9 +1,14 @@
 {
-  "name": "TicTacToeAI",
-  "version": "1.0.1",
+  "name": "geonames.js",
+  "version": "1.0.0",
   "homepage": "https://github.com/kinotto/TicTacToeAI",
+  "description": "tictactoe AI library for nodejs and browser usage",
   "authors": [
-    "karim"
+    "Karim Abdelcadir <kinotto88@yahoo.it>"
+  ],
+  "main": "src/tictactoe.js",
+  "keywords": [
+    "tictactoe"
   ],
   "license": "MIT",
   "ignore": [
@@ -13,4 +18,5 @@
     "test",
     "tests"
   ]
+
 }
