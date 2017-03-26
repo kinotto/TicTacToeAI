@@ -1,7 +1,8 @@
 # TicTacToeAI
 
 
-<img src="https://travis-ci.org/kinotto/TicTacToeAI.svg?branch=master" alt="not found" /> <img src='https://coveralls.io/repos/github/kinotto/TicTacToeAI/badge.svg?branch=master' alt='Coverage Status' /> <img id="badge" src="https://david-dm.org/kinotto/TicTacToeAI.svg" alt="badge" class="" data-reactid="77">
+<img src="https://travis-ci.org/kinotto/TicTacToeAI.svg?branch=master" alt="not found" /> <img src='https://coveralls.io/repos/github/kinotto/TicTacToeAI/badge.svg' alt='Coverage Status' /> <img id="badge" src="https://david-dm.org/kinotto/TicTacToeAI.svg" alt="badge" class="" data-reactid="77">
+
 
 
 
