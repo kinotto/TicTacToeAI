@@ -48,7 +48,7 @@
 
   TicTacToeBoard.prototype.makeMove = function(cell, location){
 		try {
-			if(this.cellAt(location) != Cell.EMPTY) {
+			if(this.cellAt(location) !== Cell.EMPTY) {
 				throw new Error("Cell is already taken");
 			} else {
 				this.board[indexFor(location)] = cell;
@@ -83,9 +83,9 @@
     var board = this.board;
 		// Return the winner if there is one
 		for(var i=0; i<winning_indexes.length; i++){
-			if(board[winning_indexes[i][0]] != Cell.EMPTY
-					&& (board[winning_indexes[i][0]] == board[winning_indexes[i][1]])
-					&& (board[winning_indexes[i][1]] == board[winning_indexes[i][2]])){
+			if(board[winning_indexes[i][0]] !== Cell.EMPTY
+					&& (board[winning_indexes[i][0]] === board[winning_indexes[i][1]])
+					&& (board[winning_indexes[i][1]] === board[winning_indexes[i][2]])){
 				//return board[winning_indexes[i][0]];
 				return new TicTacToeWinner(board[winning_indexes[i][0]], winning_indexes[i]);
 			}
@@ -171,7 +171,7 @@
 			multiplyer = -1;
 		}
 		var winner = board.winner();
-		if(winner != null) {
+		if(winner !== null) {
 			return this.evaluateWinner(winner.cell);
 		}
 
