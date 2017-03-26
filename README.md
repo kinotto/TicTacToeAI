@@ -9,7 +9,7 @@
 
 Tic Tac Toe AI  javascript library based on the Minimax (depth first) Algorithm, for browser and Node.js
 
-Are you building your custom tic tac toe? Are you looking for a way to boost your game adding IA? 
+Are you building your custom tic tac toe? Are you looking for a way to boost your game adding AI? 
 
 That is what i'm trying to accomplish with this library, the algorithm is the implementation of the <a href="https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves"> MiniMax</a> 
 
