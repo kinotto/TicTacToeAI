@@ -9,9 +9,9 @@
 
 Are you building your custom tic tac toe? Are you looking for a way to boost your game adding AI? 
 
-This is what i'm trying to accomplish with this library, the algorithm is the implementation of the <a href="https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves"> MiniMax</a> 
+This is what i'm trying to accomplish with this library.
 
-Tic Tac Toe AI is the javascript implementation of the Minimax (depth first) Algorithm that let you build easily an unbeatable AI, for browser and Node.js.
+Tic Tac Toe AI is the javascript implementation of the <a href="https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves"> MiniMax</a>  (depth first) Algorithm that let you build easily an unbeatable AI, for browser and Node.js.
 
 
 
