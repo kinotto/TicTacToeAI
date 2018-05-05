@@ -21,7 +21,7 @@ Tic Tac Toe AI is the javascript implementation of the <a href="https://en.wikip
 
 ### 1. Installation
 
-> npm install --save tictactoe-ai
+`npm install --save tictactoe-ai`
 
 <br/>
 
